@@ -29,6 +29,7 @@ node_modules/ jspm_packages
 *.tgz
 # Yarn Integrity file
 .yarn-integrity
+dist/
 
 # OS X
 *.DS_Store .AppleDouble .LSOverride
