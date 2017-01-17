@@ -30,6 +30,7 @@ node_modules/ jspm_packages
 # Yarn Integrity file
 .yarn-integrity
 dist/
+node_modules/
 
 # OS X
 *.DS_Store .AppleDouble .LSOverride
