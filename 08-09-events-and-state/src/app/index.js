@@ -16,7 +16,7 @@ class App extends React.Component {
 
         <div className='row'>
           <div className='small-12 columns'>
-            <Home name={'Ken'} age={20}/>
+            <Home name={'Ken'} initialAge={20}/>
           </div>
         </div>
       </div>

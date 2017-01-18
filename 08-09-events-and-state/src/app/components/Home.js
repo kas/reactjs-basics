@@ -4,13 +4,16 @@ export class Home extends React.Component {
   constructor(props) { // constructor receives props as argument automatically
     super();
 
-    this.age = props.age;
+    this.state = {
+      age: props.initialAge,
+      status: 0
+    };
   }
 
   onMakeOlder() {
-    this.age += 3;
-
-    console.log(this.age); // the console is updating but the HTML isn't updating because the state hasn't changed!
+    this.setState({
+      age: this.state.age + 3 // status doesn't get touched or removed -- only age is updated here
+    });
   }
 
   render() {
@@ -18,7 +21,9 @@ export class Home extends React.Component {
       <div>
         <p>In a new component!</p>
 
-        <p>Your name is {this.props.name}, your age is {this.age}</p>
+        <p>Your name is {this.props.name}, your age is {this.state.age}</p>
+
+        <p>Status: {this.state.status}</p>
 
         <hr/>
 
@@ -30,5 +35,5 @@ export class Home extends React.Component {
 
 Home.propTypes = {
   name: React.PropTypes.string,
-  age: React.PropTypes.number
+  initialAge: React.PropTypes.number
 };
